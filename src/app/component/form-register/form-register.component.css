@@ -1,0 +1,60 @@
+main{
+    width: 100vw;
+
+}
+.web{
+    width: 100%;
+    height: 485px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+    .contenedor{
+        width: 30%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        .titulo{
+            width: 100%;
+            height: 30%;
+            color:black;
+            text-align: center;
+            font-size: 40px;
+            font-style: normal;
+        }
+form{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    margin-right: 100px;
+}
+    .pos{
+        width: 20%;
+        height: 100%;
+    }
+input{
+    width: 100%;
+    height: 90%;
+    box-sizing:border-box;
+    box-shadow: 5px;
+    border-color:rgb(245, 242, 242);
+    background-color: rgb(178, 236, 238);
+    border:0px;
+    border-radius: 20px;
+    text-align: center;
+}
+    button{
+        border-radius: 50px;
+        background-color: rgb(8, 148, 89);
+        margin-left: 50px;
+        color:white;
+    }
