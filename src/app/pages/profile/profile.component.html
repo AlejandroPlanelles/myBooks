@@ -3,26 +3,35 @@
     <div class="web">
         <div class="left">
             <div class="left_foto">
-                <div class="left_foto_cont"></div>
+                <div class="left_foto_cont">
+                    <img src={{usuario.photo}}>
+                </div>
             </div>
             <div class="left_texto">
-                <div class="left_texto_title"></div>
+                <div class="left_texto_title">{{usuario.name}} {{usuario.last_name}}</div>
                 <div class="left_texto_txt">
-                    <div class="name">Nombre:<input class="nombre" type="text"></div>
-                    <div class="surname">Apellido:<input class="apellido" type="text"></div>
-                    <div class="mail">Correo:<input class="correo" type="email"></div>
+                    <div class="datos">
+                        <div class="nombre">Nombre:</div>
+                        <div class="apellido">Apellido:</div>
+                        <div class="correo">Correo:</div>
+                    </div>
+                    <div class="datos_introd">
+                        <div class="nombre1">{{usuario.name}}</div>
+                        <div class="apellido1">{{usuario.last_name}}</div>
+                        <div class="correo1">{{usuario.email}}</div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right">
-            <div class="right_title"></div>
+            <div class="right_title"><u>Modifica tus Datos</u></div>
             <div class="right_text">
                 <form>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
-                    <input type="email" placeholder="Correo">
-                    <input type="url" placeholder="URL">
-                    <button type="button">Modificar</button>
+                    <input type="text" placeholder="Nombre" #input1 >
+                    <input type="text" placeholder="Apellido" #input2>
+                    <input type="email" placeholder="Correo" #input3>
+                    <input type="url" placeholder="URL" #input4>
+                    <button type="button" on-click=mostrarNombre(input1.value,input2.value,input3.value,input4.value)>Modificar</button>
                 </form>
             </div>
         </div>

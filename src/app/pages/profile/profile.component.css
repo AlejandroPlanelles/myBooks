@@ -4,27 +4,31 @@ main{
 }
 .web{
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border:2px solid grey;
+    /* border:2px solid grey; */
+    background-color: black;
 }
     .left{
         width:40%;
-        height: 95%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         align-content: center;
-        border:2px solid black;
+        /* border:2px solid black; */
+        margin-right: 5px;
+        opacity: 50%;
+        background-color: white;
     }
         .left_foto{
-            width: 50%;
+            width: 70%;
             height: 50%;
-            border:2px solid red;
+            /* border:2px solid red; */
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -32,30 +36,103 @@ main{
         }
             .left_foto_cont{
                 width: 50%;
-                height: 50%;
+                height: 70%;
                 border-radius: 50%;
-                border:2px solid purple;
+                /* border:2px solid purple; */
             }
+            .left_foto_cont img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }   
         .left_texto{
-            width: 50%;
+            width: 70%;
             height: 50%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
-            border:2px solid purple;
+            /* border:2px solid red; */
         }
-            .left_text_title{
+            .left_texto_title{
                 width: 90%;
                 height: 10%;
-                border:2px solid blue;
+                /* border:2px solid blue; */
+                text-align: center;
+                font-style: normal;
+                font-size: 20px;
             }
             .left_texto_txt{
                 width: 90%;
                 height: 80%;
-                border:2px solid blue;
+                /* border:2px solid blue; */
+                display: flex;
+                flex-direction: row;
+                flex-direction: center;
+                align-items: center;
             }
             
-        .left_texto input{
-            padding: 2px;
+                .datos{
+                    width: 30%;
+                    height: 90%;
+                    /* border:2px solid green; */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+                .datos_introd{
+                    width: 70%;
+                    height: 90%;
+                    /* border:2px solid red; */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+    .right{
+        width:40%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        /* border:2px solid black; */
+        margin-left: 5px;
+        opacity: 50%;
+        background-color: white;
+    }
+        .right_title{
+            width:60%;
+            height: 10%;
+            /* border: 2px solid blue; */
+            text-align: center;
+            font-size: 30px;
+            font-style: normal;
+            
         }
+        .right_text{
+            width: 60%;
+            height: 60%;
+            /* border:2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+            .right_text input{
+                width: 100%;
+                height: 50px;
+                margin-top:5px;
+            }
+            .right_text button{
+                width: 40%;
+                height: 15%;
+                margin-left: 100px;
+                margin-top:10px;
+                background-color:rgb(8, 148, 89) ;
+                color:white;
+                font-style: normal;
+            }
