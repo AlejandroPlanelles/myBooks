@@ -18,6 +18,7 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        /* border: 2px solid green; */
     }
         .titulo{
             width: 100%;
@@ -26,6 +27,7 @@ main{
             text-align: center;
             font-size: 40px;
             font-style: normal;
+            /* border: 2px solid black; */
         }
 form{
     width: 80%;
@@ -34,9 +36,8 @@ form{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid black; */
-    margin-right: 100px;
-}
+    /* border: 2px solid black;  */
+ }
     .pos{
         width: 20%;
         height: 100%;
@@ -51,10 +52,10 @@ input{
     border:0px;
     border-radius: 20px;
     text-align: center;
+    margin-top: 5px;
 }
     button{
         border-radius: 50px;
         background-color: rgb(8, 148, 89);
-        margin-left: 50px;
         color:white;
     }

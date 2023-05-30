@@ -1,0 +1,41 @@
+
+.web_box1{
+    width: 300px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(8, 148, 89);
+    margin:5px;
+}
+
+.box_title{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(8, 148, 89);
+    font-style: normal;
+    font-size: 40px;
+}
+.box_text{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    /* border: 1px solid green; */
+ }
+    .box_text input{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+ 
+
+     /* .is-invalid{
+        border: 1px solid red;
+    } */

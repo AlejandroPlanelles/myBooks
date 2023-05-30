@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="first-content">
+        <img src="{{cartaPadre.photo}}" style="width: 190px;height: 254px;border-radius: 10px;">
+    </div>
+    <div class="second-content">
+        <button class="eliminar" type="button" (click)="quitarCaja()">X</button>
+        <p>{{cartaPadre.title}}</p>
+        <p>{{cartaPadre.type}}</p>
+        <p>{{cartaPadre.author}}</p>
+        <p>{{cartaPadre.price}}</p>
+        <p>{{cartaPadre.id_book | ref}}</p>
+        <button class="boton1" type="button"  [ngClass]="esPar === true ? 'colores' : ''">Pulsa</button>
+    </div>
+</div>

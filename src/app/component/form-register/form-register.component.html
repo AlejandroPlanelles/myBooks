@@ -3,16 +3,43 @@
     <div class="web">
     <div class="contenedor">
         <div class="titulo">Registrate aqui</div>
-    <form>
-        <div class="pos">
+    <form [formGroup]="myForm">
+        <div class="form-group">
         <ul>
-            <li><input type="text" placeholder="Nombre" style="height: 20px; width: 150px;"></li>
-            <li><input type="text" placeholder="Apellido" style="height: 20px;width: 150px"></li>
-            <li><input type="email" placeholder="Email" style="height: 20px;width: 150px"></li>
-            <li><input type="url" placeholder="URL" style="height: 20px;width: 150px"></li>
-            <li><input type="password" placeholder="Contraseña" style="height: 20px;width: 150px"></li>
-            <li><input type="password" placeholder="Repetir contraseña" style="height: 20px;width: 150px"></li><br>
-                <button type="button" style="width: 50px; height: 50px;">Aceptar</button>                
+            <li><input type="text" placeholder="Nombre" style="height: 20px; width: 150px;" class="form-control" formControlName="nombre"
+                [ngClass]="{'is-invalid': (myForm.get('nombre').dirty || myForm.get('nombre').touched) && !myForm.get('nombre').valid}">
+            <div *ngIf="!myForm.get('nombre').valid" class="invalid-feedback">El nombre es necesario</div>
+            </li>
+            <li><input type="text" placeholder="Apellido" style="height: 20px;width: 150px" class="form-control" formControlName="apellido"
+                [ngClass]="{'is-invalid': (myForm.get('apellido').dirty || myForm.get('apellido').touched) && !myForm.get('apellido').valid}">
+                <div *ngIf="!myForm.get('apellido').valid" class="invalid-feedback">El apellido es necesario</div>
+            </li>
+            <li><input type="email" placeholder="Email" style="height: 20px;width: 150px" class="form-control" formControlName="email"
+                [ngClass]="{'is-invalid':(myForm.get('email').dirty || myForm.get('email').touched) && !myForm.get('email').valid}">
+                <div *ngIf="!myForm.get('email').valid" class="invalid-feedback">
+                    <div *ngIf="myForm.get('email').errors.required">La direccion de email es obligatoria</div>
+                    <div *ngIf="myForm.get('email').errors.email">Direccion emain incorrecta</div>
+                </div>
+            </li>
+            <li><input type="url" placeholder="URL" style="height: 20px;width: 150px" class="form-control" formControlName="url"
+                [ngClass]="{'is-invalid': (myForm.get('url').dirty || myForm.get('url').touched) && !myForm.get('url').valid}">
+                <div *ngIf="!myForm.get('url').valid" class="invalid-feedback">la foto es necesaria</div>
+            </li>
+            <li><input type="password" placeholder="Contraseña" style="height: 20px;width: 150px" class="form-control" formControlName="password"
+                [ngClass]="{'is-invalid':(myForm.get('password').dirty || myForm.get('password').touched) && !myForm.get('password').valid}">
+                <div *ngIf="!myForm.get('password').valid" class="invalid-feedback">
+                    <div *ngIf="myForm.get('password').errors.required">La clave es obligatoria</div>
+                    <div *ngIf="myForm.get('password').errors.minlength">La clave debe tener al menos 8 carcteres</div>
+                </div>
+            </li>
+            <li><input type="password" placeholder="Repetir contraseña" style="height: 20px;width: 150px" class="form-control" formControlName="password2"
+                [ngClass]="{'is-invalid':(myForm.get('password2').dirty || myForm.get('password2').touched) && !myForm.get('password2').valid}">
+                <div *ngIf="!myForm.get('password2').valid" class="invalid-feedback">
+                    <div *ngIf="myForm.get('password2').errors.required">La clave es obligatoria</div>
+                    <div *ngIf="myForm.get('password2').errors.required && myForm.get('password2').errors.matchPassword">Las claves no coinciden</div>
+                </div>
+            </li><br>
+                <button style="width: 100px; height: 50px;" class="btn btn-danger btn-block" (click)="register()" [disabled]="myForm.invalid">Aceptar</button>                
         </ul>
         </div>
     </form>

@@ -81,3 +81,51 @@ main{
                 text-decoration:none;
                 color:white;
             }
+        .books{
+            width: 10%;
+            height: 30%;
+            /* border:2px solid red; */
+            font-size: 20px;
+            font-style: normal;
+            text-align: center;
+        } 
+            .books a{
+                text-decoration:none;
+                color:white;
+            }
+            .add{
+                width: 10%;
+                height: 30%;
+                /* border:2px solid red; */
+                font-size: 20px;
+                font-style: normal;
+                text-align: center;
+            } 
+                .add a{
+                    text-decoration:none;
+                    color:white;
+                }
+            .mod{
+                width: 10%;
+                height: 30%;
+                /* border:2px solid red; */
+                font-size: 20px;
+                font-style: normal;
+                text-align: center;
+            } 
+                .mod a{
+                    text-decoration:none;
+                    color:white;
+                }
+            .login{
+                width: 10%;
+                height: 30%;
+                /* border:2px solid red; */
+                font-size: 20px;
+                font-style: normal;
+                text-align: center;
+            } 
+                .login a{
+                    text-decoration:none;
+                    color:white;
+                }                                                          

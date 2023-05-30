@@ -9,6 +9,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { BooksComponent } from './pages/books/books.component';
+import { RefPipe } from './pipes/ref.pipe';
+import { CardComponent } from './component/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { ModBookComponent } from './pages/mod-book/mod-book.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormLoginComponent } from './component/form-login/form-login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule,} from '@angular/platform-browser/animations'
+
 
 @NgModule({
   declarations: [
@@ -18,11 +29,22 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HomeComponent,
     FormRegisterComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    BooksComponent,
+    RefPipe,
+    CardComponent,
+    AddBookComponent,
+    ModBookComponent,
+    LoginComponent,
+    FormLoginComponent,   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

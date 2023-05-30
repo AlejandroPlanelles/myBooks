@@ -1,0 +1,16 @@
+
+<main>
+    <div class="web">
+        <div class="header">
+            <input type="url" placeholder="ID Libro" #input>
+                <button type="button" on-click=encontrar(+input.value)>Buscar</button>
+        </div>
+        <ng-container *ngIf="libros.length===0">Está vacio
+        </ng-container>  
+            <div class="web_1">
+            <ng-container *ngFor="let libro of libros; let par = even">
+                <app-card [cartaPadre]="libro" [esPar]="par" (quitar)=borrar($event)></app-card>
+            </ng-container>
+            </div>     
+    </div>
+</main>
